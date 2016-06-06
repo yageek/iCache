@@ -654,7 +654,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="1024" height="346"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="64D324CB-E7B2-4FCA-A6A2-3265E66972A3" explicitIdentifier="MainToolbar" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="small" id="67c-aj-JXZ">
                             <allowedToolbarItems>
@@ -686,11 +686,11 @@
             <objects>
                 <splitViewController id="v7U-sg-mdY" userLabel="Main Split" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem id="JvW-gJ-3OV"/>
+                        <splitViewItem canCollapse="YES" holdingPriority="260" behavior="sidebar" id="JvW-gJ-3OV"/>
                         <splitViewItem id="A9B-wV-TKP"/>
                     </splitViewItems>
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="TbI-9Z-N6X">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                    <splitView key="splitView" wantsLayer="YES" dividerStyle="thin" vertical="YES" id="TbI-9Z-N6X">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
@@ -786,7 +786,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="41n-9v-8ii"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ghE-7x-mzG">
-                                    <rect key="frame" x="1" y="119" width="238" height="15"/>
+                                    <rect key="frame" x="1" y="283" width="248" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="r5S-Jk-ULW">
@@ -805,7 +805,7 @@
                 </viewController>
                 <customObject id="OT6-Ur-pqT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="458"/>
+            <point key="canvasLocation" x="-404" y="1263"/>
         </scene>
         <!--Main Table-->
         <scene sceneID="ya8-MT-Pox">
@@ -822,15 +822,28 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" headerView="9mo-GY-2bd" id="OXb-6L-2XP">
-                                            <rect key="frame" x="0.0" y="0.0" width="965" height="276"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1031" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
+                                                <tableColumn identifier="" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="qXR-iP-D0M">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Found">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="6ta-sM-XJc">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
                                                 <tableColumn editable="NO" width="40" minWidth="40" maxWidth="1000" id="XiY-w3-6i7">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Type">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -917,7 +930,7 @@
                                                         </binding>
                                                     </connections>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="123.12109375" minWidth="10" maxWidth="3.4028234663852886e+38" id="RiB-sI-cVK">
+                                                <tableColumn identifier="" editable="NO" width="123.12109375" minWidth="10" maxWidth="3.4028234663852886e+38" id="RiB-sI-cVK">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Latitude">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -963,6 +976,9 @@
                                                     </tableHeaderCell>
                                                     <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="OF6-az-7lq"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <connections>
+                                                        <binding destination="eZC-bB-Og2" name="value" keyPath="arrangedObjects.countryImage" id="hYi-J7-OUA"/>
+                                                    </connections>
                                                 </tableColumn>
                                                 <tableColumn identifier="" editable="NO" width="317.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="kPP-hz-OxS">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Author">
@@ -992,8 +1008,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="450" id="boZ-5G-3uG"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="FEG-6n-nIZ">
-                                    <rect key="frame" x="1" y="283" width="448" height="16"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.030303030303030304" horizontal="YES" id="FEG-6n-nIZ">
+                                    <rect key="frame" x="1" y="283" width="965" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="feO-MU-Fqc">
@@ -1001,7 +1017,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="9mo-GY-2bd">
-                                    <rect key="frame" x="0.0" y="0.0" width="965" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1031" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -1022,7 +1038,7 @@
                 </arrayController>
                 <userDefaultsController representsSharedInstance="YES" id="Qgq-ij-NaI"/>
             </objects>
-            <point key="canvasLocation" x="996.5" y="1127"/>
+            <point key="canvasLocation" x="600.5" y="1263"/>
         </scene>
     </scenes>
     <resources>

@@ -1,6 +1,7 @@
 import Foundation
 import CoreData
 import Cocoa
+import FlagKit
 
 @objc(Geocache)
 public class Geocache: _Geocache {
@@ -20,6 +21,12 @@ public class Geocache: _Geocache {
 
     var typeImage: NSImage {
         return geocacheType.image
+    }
+
+    var countryImage: NSImage {
+        get {
+            return NSImage(flagImageWithCountryCode: country) ?? NSImage(flagImageForSpecialFlag: .World)!
+        }
     }
 }
 

@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0B2FA4731D061BA60030186B /* FlagKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FA4721D061BA60030186B /* FlagKit.framework */; };
+		0B2FA4741D061BAC0030186B /* FlagKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FA4721D061BA60030186B /* FlagKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B415B581D05CE3900959F04 /* LatitudeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B415B571D05CE3900959F04 /* LatitudeFormatter.swift */; };
 		0B415B5C1D05D16B00959F04 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B415B5B1D05D16B00959F04 /* QuartzCore.framework */; };
 		0B415B5F1D05D22500959F04 /* GeocacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B415B5E1D05D22500959F04 /* GeocacheType.swift */; };
@@ -78,6 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0B2FA4741D061BAC0030186B /* FlagKit.framework in Embed Frameworks */,
 				0B5E417F1D048F0B00F89CEE /* PSOperations.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -95,6 +98,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B2FA4721D061BA60030186B /* FlagKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlagKit.framework; path = Carthage/Build/Mac/FlagKit.framework; sourceTree = "<group>"; };
 		0B415B571D05CE3900959F04 /* LatitudeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatitudeFormatter.swift; sourceTree = "<group>"; };
 		0B415B5B1D05D16B00959F04 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B415B5E1D05D22500959F04 /* GeocacheType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocacheType.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2FA4731D061BA60030186B /* FlagKit.framework in Frameworks */,
 				0B415B5C1D05D16B00959F04 /* QuartzCore.framework in Frameworks */,
 				0B5E417E1D048F0B00F89CEE /* PSOperations.framework in Frameworks */,
 			);
@@ -274,6 +279,7 @@
 		0BFCAF031CEC8EFC00A6F64D = {
 			isa = PBXGroup;
 			children = (
+				0B2FA4721D061BA60030186B /* FlagKit.framework */,
 				0B415B5B1D05D16B00959F04 /* QuartzCore.framework */,
 				0B5E417D1D048F0B00F89CEE /* PSOperations.framework */,
 				0B8E15D41CEC9EEF0062D459 /* Cartfile */,
