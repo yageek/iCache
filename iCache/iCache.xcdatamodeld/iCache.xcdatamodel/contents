@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Geocache" representedClassName="Geocache" syncable="YES">
+        <attribute name="archived" attributeType="Boolean" syncable="YES"/>
+        <attribute name="available" attributeType="Boolean" syncable="YES"/>
+        <attribute name="container" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="country" attributeType="String" syncable="YES"/>
+        <attribute name="difficulty" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="gccode" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="hint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="long_desc" attributeType="String" syncable="YES"/>
+        <attribute name="long_desc_html" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="owner_id" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="owner_name" attributeType="String" syncable="YES"/>
+        <attribute name="placed_by" attributeType="String" syncable="YES"/>
+        <attribute name="short_desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="short_desc_html" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="terrain" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="importedFromGpx" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GPXFile" inverseName="geocaches" inverseEntity="GPXFile" syncable="YES"/>
+        <relationship name="waypoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Waypoint" inverseName="cache" inverseEntity="Waypoint" syncable="YES"/>
+    </entity>
+    <entity name="GPXFile" representedClassName="GPXFile" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="importedDate" attributeType="Date" syncable="YES"/>
+        <attribute name="maxlat" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxlon" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="minlat" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="minlon" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="geocaches" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Geocache" inverseName="importedFromGpx" inverseEntity="Geocache" syncable="YES"/>
+    </entity>
+    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
+        <attribute name="cmt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cache" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geocache" inverseName="waypoints" inverseEntity="Geocache" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Geocache" positionX="-63" positionY="-18" width="128" height="405"/>
+        <element name="GPXFile" positionX="-54" positionY="-9" width="128" height="210"/>
+        <element name="Waypoint" positionX="-36" positionY="9" width="128" height="180"/>
+    </elements>
+</model>
