@@ -6,9 +6,11 @@ import FlagKit
 @objc(Geocache)
 public class Geocache: _Geocache {
 	private var currentString = ""
+    private var inLogs = false
 
     var geocacheType: GeocacheType {
         get {
+            print("Type: \(type)")
             return GeocacheType(rawValue: type!.integerValue) ?? .None
         }
     }
@@ -25,9 +27,32 @@ public class Geocache: _Geocache {
 
     var countryImage: NSImage {
         get {
-            return NSImage(flagImageWithCountryCode: country) ?? NSImage(flagImageForSpecialFlag: .World)!
+            let defaultImage = NSImage(flagImageForSpecialFlag: .World)!
+
+            guard let countryCode = countriesDict[country] else { return  defaultImage}
+            
+            return NSImage(flagImageWithCountryCode: countryCode) ?? defaultImage
         }
     }
+
+    lazy var countriesDict: [String: String] = {
+
+        let countryCode = NSLocale.ISOCountryCodes()
+        let geocachingLocale = NSLocale(localeIdentifier: "en_US")
+
+        var countryHash: [String:String] = [:]
+
+        for code in countryCode {
+            let identifier = NSLocale.localeIdentifierFromComponents([NSLocaleCountryCode:code])
+            let countryName = geocachingLocale.displayNameForKey(NSLocaleIdentifier, value: identifier)
+
+            if let countryName = countryName {
+                countryHash[countryName] = code;
+            }
+        }
+
+        return countryHash
+    }()
 }
 
 
@@ -37,17 +62,20 @@ extension Geocache: NSXMLParserDelegate {
 
         switch (elementName, namespaceURI) {
 
-        case ("cache", GeocachingURI?):
+        case ("cache", _):
             available = stringBool(attributeDict["available"])
             archived = stringBool(attributeDict["archived"])
-        case ("owner", GeocachingURI?):
+        case ("owner", _):
             let owner = Int(attributeDict["id"] ?? "0") ?? 0
             owner_id = NSNumber(integer: owner)
-        case ("short_description", GeocachingURI?):
+        case ("short_description", _):
             short_desc_html = stringBool(attributeDict["html"])
-        case ("long_description", GeocachingURI?):
+        case ("long_description", _):
             long_desc_html = stringBool(attributeDict["html"])
-
+        case ("type", GeocachingURI?):
+            fallthrough
+        case ("logs", GeocachingURI2?):
+            inLogs = true
         default:
             break
         }
@@ -56,7 +84,7 @@ extension Geocache: NSXMLParserDelegate {
 
     public func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
 
-        let currentValue = currentString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        var currentValue = currentString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 
         defer {
             currentString = ""
@@ -70,34 +98,43 @@ extension Geocache: NSXMLParserDelegate {
             url = currentValue
         case ("urlName", GPXURI?):
             urlName = currentValue
-        case ("placed_by", GeocachingURI?):
-            fallthrough
-        case ("placed_by", GeocachingURI2?):
+        case ("placed_by", _):
             placed_by = currentValue
-        case ("owner", GeocachingURI?):
+        case ("owner", _):
             owner_name = currentValue
-        case ("type", GeocachingURI?):
-            type = GeocacheType(string: currentValue).rawValue
-        case ("container", GeocachingURI?):
+        case ("type", _) where inLogs == false:
+
+            if let range = currentValue.rangeOfString("Geocache|") {
+                currentValue.removeRange(range)
+            }
+
+            let typeValue =  GeocacheType(string: currentValue)
+            print("Parsing type:\(typeValue)")
+            type = NSNumber(integer: typeValue.rawValue)
+
+        case ("container", _):
             container = GeocacheContainer(string: currentValue).rawValue
-        case ("difficulty", GeocachingURI?):
+        case ("difficulty", _):
             fallthrough
-        case ("difficulty", GeocachingURI2?):
+        case ("difficulty", _):
             difficulty = Float(currentValue ?? "0")
-        case ("terrain", GeocachingURI?):
+        case ("terrain", _):
             terrain =  Float(currentValue ?? "0")
-        case ("country", GeocachingURI?):
+        case ("country", _):
             country = currentValue
-        case ("state", GeocachingURI?):
+        case ("state", _):
             state = currentValue
-        case ("short_description", GeocachingURI?):
+        case ("short_description", _):
             short_desc = currentValue
-        case ("long_description", GeocachingURI?):
+        case ("long_description", _):
             long_desc = currentValue
-        case ("name", GeocachingURI?):
+        case ("name", _):
             name = currentValue
         case ("wpt",_):
             parser.delegate = importedFromGpx
+        case ("logs", _) where inLogs == true:
+            inLogs = false
+
         default:
             break
         }

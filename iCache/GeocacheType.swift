@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 enum GeocacheType: Int {
-    case Traditionnal
+    case Traditionnal = 0
     case Unknown
     case Multi
     case Event

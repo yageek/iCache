@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
     <entity name="Geocache" representedClassName="Geocache" syncable="YES">
-        <attribute name="archived" attributeType="Boolean" syncable="YES"/>
-        <attribute name="available" attributeType="Boolean" syncable="YES"/>
+        <attribute name="archived" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="available" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
         <attribute name="container" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="country" attributeType="String" syncable="YES"/>
         <attribute name="difficulty" attributeType="Float" defaultValueString="0" syncable="YES"/>
