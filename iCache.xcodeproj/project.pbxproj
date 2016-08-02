@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		0B8E15BD1CEC9E6B0062D459 /* Mogenerator */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 0B8E15C01CEC9E6B0062D459 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
-			buildPhases = (
-				0B8E15C31CEC9E780062D459 /* Run Script */,
-			);
-			dependencies = (
-			);
-			name = Mogenerator;
-			productName = Mogenerator;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		0B2FA4731D061BA60030186B /* FlagKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FA4721D061BA60030186B /* FlagKit.framework */; };
 		0B2FA4741D061BAC0030186B /* FlagKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FA4721D061BA60030186B /* FlagKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -28,8 +14,8 @@
 		0B415B5F1D05D22500959F04 /* GeocacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B415B5E1D05D22500959F04 /* GeocacheType.swift */; };
 		0B415B611D05D2CE00959F04 /* GeocacheContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B415B601D05D2CE00959F04 /* GeocacheContainer.swift */; };
 		0B4BE7861D05457F0006E2BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4BE7851D05457F0006E2BA /* MainWindowController.swift */; };
-		0B5E417E1D048F0B00F89CEE /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5E417D1D048F0B00F89CEE /* PSOperations.framework */; };
-		0B5E417F1D048F0B00F89CEE /* PSOperations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5E417D1D048F0B00F89CEE /* PSOperations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B7A677B1D50BD2E007C65D9 /* Operations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7A677A1D50BD2E007C65D9 /* Operations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B7A677C1D50BDA0007C65D9 /* Operations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7A677A1D50BD2E007C65D9 /* Operations.framework */; };
 		0B8E15CE1CEC9EBD0062D459 /* Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15C71CEC9EBD0062D459 /* Geocache.swift */; };
 		0B8E15CF1CEC9EBD0062D459 /* GPXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15C81CEC9EBD0062D459 /* GPXFile.swift */; };
 		0B8E15D01CEC9EBD0062D459 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15C91CEC9EBD0062D459 /* Waypoint.swift */; };
@@ -50,13 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B8E15C11CEC9E720062D459 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BFCAF041CEC8EFC00A6F64D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B8E15BD1CEC9E6B0062D459;
-			remoteInfo = Mogenerator;
-		};
 		0BFCAF211CEC8EFC00A6F64D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BFCAF041CEC8EFC00A6F64D /* Project object */;
@@ -80,8 +59,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0B7A677B1D50BD2E007C65D9 /* Operations.framework in Embed Frameworks */,
 				0B2FA4741D061BAC0030186B /* FlagKit.framework in Embed Frameworks */,
-				0B5E417F1D048F0B00F89CEE /* PSOperations.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,7 +83,8 @@
 		0B415B5E1D05D22500959F04 /* GeocacheType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocacheType.swift; sourceTree = "<group>"; };
 		0B415B601D05D2CE00959F04 /* GeocacheContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocacheContainer.swift; sourceTree = "<group>"; };
 		0B4BE7851D05457F0006E2BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		0B5E417D1D048F0B00F89CEE /* PSOperations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSOperations.framework; path = Carthage/Build/Mac/PSOperations.framework; sourceTree = "<group>"; };
+		0B7A67781D50BC28007C65D9 /* Operations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operations.framework; path = Carthage/Build/Mac/Operations.framework; sourceTree = "<group>"; };
+		0B7A677A1D50BD2E007C65D9 /* Operations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operations.framework; path = Carthage/Build/Mac/Operations.framework; sourceTree = "<group>"; };
 		0B8E15C71CEC9EBD0062D459 /* Geocache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocache.swift; sourceTree = "<group>"; };
 		0B8E15C81CEC9EBD0062D459 /* GPXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXFile.swift; sourceTree = "<group>"; };
 		0B8E15C91CEC9EBD0062D459 /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
@@ -136,9 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7A677C1D50BDA0007C65D9 /* Operations.framework in Frameworks */,
 				0B2FA4731D061BA60030186B /* FlagKit.framework in Frameworks */,
 				0B415B5C1D05D16B00959F04 /* QuartzCore.framework in Frameworks */,
-				0B5E417E1D048F0B00F89CEE /* PSOperations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +259,10 @@
 		0BFCAF031CEC8EFC00A6F64D = {
 			isa = PBXGroup;
 			children = (
+				0B7A677A1D50BD2E007C65D9 /* Operations.framework */,
+				0B7A67781D50BC28007C65D9 /* Operations.framework */,
 				0B2FA4721D061BA60030186B /* FlagKit.framework */,
 				0B415B5B1D05D16B00959F04 /* QuartzCore.framework */,
-				0B5E417D1D048F0B00F89CEE /* PSOperations.framework */,
 				0B8E15D41CEC9EEF0062D459 /* Cartfile */,
 				0BFCAF0E1CEC8EFC00A6F64D /* iCache */,
 				0BFCAF231CEC8EFC00A6F64D /* iCacheTests */,
@@ -348,7 +329,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0B8E15C21CEC9E720062D459 /* PBXTargetDependency */,
 			);
 			name = iCache;
 			productName = iCache;
@@ -401,9 +381,6 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "yageek's company";
 				TargetAttributes = {
-					0B8E15BD1CEC9E6B0062D459 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
 					0BFCAF0B1CEC8EFC00A6F64D = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -433,7 +410,6 @@
 				0BFCAF0B1CEC8EFC00A6F64D /* iCache */,
 				0BFCAF1F1CEC8EFC00A6F64D /* iCacheTests */,
 				0BFCAF2A1CEC8EFC00A6F64D /* iCacheUITests */,
-				0B8E15BD1CEC9E6B0062D459 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -463,23 +439,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0B8E15C31CEC9E780062D459 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/zsh;
-			shellScript = "cd $SRCROOT/iCache/\nmogenerator -m iCache.xcdatamodeld/iCache.xcdatamodel -M CoreData/Machine -H CoreData/Human --swift";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BFCAF081CEC8EFC00A6F64D /* Sources */ = {
@@ -525,11 +484,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B8E15C21CEC9E720062D459 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B8E15BD1CEC9E6B0062D459 /* Mogenerator */;
-			targetProxy = 0B8E15C11CEC9E720062D459 /* PBXContainerItemProxy */;
-		};
 		0BFCAF221CEC8EFC00A6F64D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0BFCAF0B1CEC8EFC00A6F64D /* iCache */;
@@ -554,20 +508,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0B8E15BE1CEC9E6B0062D459 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		0B8E15BF1CEC9E6B0062D459 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		0BFCAF321CEC8EFC00A6F64D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -739,15 +679,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B8E15C01CEC9E6B0062D459 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B8E15BE1CEC9E6B0062D459 /* Debug */,
-				0B8E15BF1CEC9E6B0062D459 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0BFCAF071CEC8EFC00A6F64D /* Build configuration list for PBXProject "iCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

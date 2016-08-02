@@ -6,7 +6,7 @@
 //  Copyright © 2016 yageek's company. All rights reserved.
 //
 
-import PSOperations
+import Operations
 import CoreData
 
 let GPXURI = "http://www.topografix.com/GPX/1/0"
@@ -25,6 +25,8 @@ class ImportGPXOperation: Operation {
 
         gpxURL = fileURL
 
+        super.init()
+        name = "Parse GPX Operation"
     }
 
     override func execute() {
@@ -42,11 +44,11 @@ class ImportGPXOperation: Operation {
                     try self.managedContext.save()
                 } catch let error as NSError {
                     print("An error occurs during importing \(self.gpxURL): \(error)")
-                    self.finishWithError(error)
+                    self.finish(error)
                 }
 
             } else {
-                self.finishWithError(parser.parserError)
+                self.finish(parser.parserError)
             }
         }
 
@@ -57,7 +59,6 @@ class ImportGPXOperation: Operation {
 }
 
 // MARK: XML Parsing
-
 extension ImportGPXOperation: NSXMLParserDelegate {
 
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {

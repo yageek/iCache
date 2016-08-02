@@ -21,6 +21,6 @@ extension Store {
             NSOperationQueue.mainQueue().addOperation(blockOperation)
         }
 
-        self.importQueue.addOperation(importFilesOperation)
+        self.importFilesQueue.addOperation(importFilesOperation)
     }
 }

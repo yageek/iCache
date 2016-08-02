@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import PSOperations
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

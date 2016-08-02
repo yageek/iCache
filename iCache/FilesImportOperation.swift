@@ -6,7 +6,7 @@
 //  Copyright © 2016 yageek's company. All rights reserved.
 //
 
-import PSOperations
+import Operations
 import CoreData
 
 class FilesImportOperation : Operation {
@@ -22,8 +22,7 @@ class FilesImportOperation : Operation {
 
         name = "Import Files Operation"
     }
-
-
+    
     override func execute() {
 
         for fileURL in fileURLs where fileURL.fileURL {
@@ -34,11 +33,10 @@ class FilesImportOperation : Operation {
             case "gpx":
                 produceOperation(ImportGPXOperation(moc: managedObjectContext, fileURL: fileURL))
             default:
-                self.finishWithError(NSError(domain: "iCache", code: 1, userInfo: nil))
+                self.finish(NSError(domain: "iCache", code: 1, userInfo: nil))
             }
 
         }
-
 
         finish()
     }

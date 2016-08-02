@@ -1,4 +1,2 @@
-github "madebybowtie/FlagKit" "v1.0.7"
-github "Quick/Nimble" "v4.0.1"
-github "yageek/PSOperations" "cd896162d92fff11ce46e45e830c0c87bf65a696"
-github "Quick/Quick" "v0.9.2"
+github "madebybowtie/FlagKit" "v1.1.1"
+github "danthorpe/Operations" "3.0.0"

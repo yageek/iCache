@@ -7,11 +7,9 @@
 //
 
 import Cocoa
-import PSOperations
+import Operations
 
 class MainWindowController: NSWindowController {
-
-    let queue = OperationQueue()
 
     @IBOutlet var mainTableViewController: GeocacheTableViewController!
 

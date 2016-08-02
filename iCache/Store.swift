@@ -8,12 +8,19 @@
 
 import Cocoa
 import CoreData
-import PSOperations
+import Operations
 
 class Store {
 
     static let sharedInstance = Store()
-    let importQueue = OperationQueue()
+    let importFilesQueue: OperationQueue = {
+
+        let queue = OperationQueue()
+        queue.name = "net.yageek.iCache.importingFiles"
+        queue.maxConcurrentOperationCount = 1
+        return queue
+    }()
+
 
     // MARK: - Core Data stack
     lazy var applicationDocumentsDirectory: NSURL = {
