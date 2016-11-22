@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
-    <entity name="Geocache" representedClassName="Geocache" syncable="YES">
+    <entity name="Geocache" representedClassName=".Geocache" syncable="YES">
         <attribute name="archived" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="available" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
         <attribute name="container" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -25,8 +25,13 @@
         <attribute name="urlName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="importedFromGpx" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GPXFile" inverseName="geocaches" inverseEntity="GPXFile" syncable="YES"/>
         <relationship name="waypoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Waypoint" inverseName="cache" inverseEntity="Waypoint" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="gccode"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
-    <entity name="GPXFile" representedClassName="GPXFile" syncable="YES">
+    <entity name="GPXFile" representedClassName=".GPXFile" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -39,7 +44,7 @@
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="geocaches" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Geocache" inverseName="importedFromGpx" inverseEntity="Geocache" syncable="YES"/>
     </entity>
-    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
+    <entity name="Waypoint" representedClassName=".Waypoint" syncable="YES">
         <attribute name="cmt" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lat" attributeType="Double" defaultValueString="0.0" syncable="YES"/>

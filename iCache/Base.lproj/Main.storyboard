@@ -871,9 +871,6 @@
                                                     </tableHeaderCell>
                                                     <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Jxz-bt-pZ3"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                    <connections>
-                                                        <binding destination="eZC-bB-Og2" name="value" keyPath="arrangedObjects.typeImage" id="5IR-R3-rz6"/>
-                                                    </connections>
                                                 </tableColumn>
                                                 <tableColumn editable="NO" width="75.578125" minWidth="40" maxWidth="1000" id="9eU-h4-ORv">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="GCCode">
@@ -997,9 +994,6 @@
                                                     </tableHeaderCell>
                                                     <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="OF6-az-7lq"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                    <connections>
-                                                        <binding destination="eZC-bB-Og2" name="value" keyPath="arrangedObjects.countryImage" id="hYi-J7-OUA"/>
-                                                    </connections>
                                                 </tableColumn>
                                                 <tableColumn identifier="" editable="NO" width="317.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="kPP-hz-OxS">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Author">

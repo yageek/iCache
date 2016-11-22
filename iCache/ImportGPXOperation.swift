@@ -17,7 +17,6 @@ class ImportGPXOperation: Operation {
 
     let managedContext: NSManagedObjectContext
     let gpxURL: NSURL
-    var currentGPXFile: GPXFile?
 
     init(moc: NSManagedObjectContext, fileURL: NSURL) {
         managedContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
@@ -26,7 +25,8 @@ class ImportGPXOperation: Operation {
         gpxURL = fileURL
 
         super.init()
-        name = "Parse GPX Operation"
+
+        name = "Import GPX Operation"
     }
 
     override func execute() {
@@ -66,8 +66,10 @@ extension ImportGPXOperation: NSXMLParserDelegate {
         switch (namespaceURI, elementName) {
 
         case (GPXURI?, "gpx"):
-            currentGPXFile = NSEntityDescription.insertNewObjectForEntityForName(GPXFile.entityName(), inManagedObjectContext: self.managedContext) as? GPXFile
-            parser.delegate = currentGPXFile
+            let currentGPXFile = NSEntityDescription.insertNewObjectForEntityForName(GPXFile.EntityName, inManagedObjectContext: self.managedContext) as? GPXFile
+            let xmlParser  = GPXElementParser(parser: parser, object: currentGPXFile)
+            
+           // parser.delegate = currentGPXFile
         default:
             break
         }

@@ -67,7 +67,7 @@ class Store {
         var coordinator: NSPersistentStoreCoordinator? = nil
         if failError == nil {
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("CocoaAppCD.sqlite")
+            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("iCache.sqlite")
             do {
                 try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
             } catch {

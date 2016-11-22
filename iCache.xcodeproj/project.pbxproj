@@ -16,12 +16,13 @@
 		0B4BE7861D05457F0006E2BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4BE7851D05457F0006E2BA /* MainWindowController.swift */; };
 		0B7A677B1D50BD2E007C65D9 /* Operations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7A677A1D50BD2E007C65D9 /* Operations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B7A677C1D50BDA0007C65D9 /* Operations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7A677A1D50BD2E007C65D9 /* Operations.framework */; };
-		0B8E15CE1CEC9EBD0062D459 /* Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15C71CEC9EBD0062D459 /* Geocache.swift */; };
-		0B8E15CF1CEC9EBD0062D459 /* GPXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15C81CEC9EBD0062D459 /* GPXFile.swift */; };
-		0B8E15D01CEC9EBD0062D459 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15C91CEC9EBD0062D459 /* Waypoint.swift */; };
-		0B8E15D11CEC9EBD0062D459 /* _Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15CB1CEC9EBD0062D459 /* _Geocache.swift */; };
-		0B8E15D21CEC9EBD0062D459 /* _GPXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15CC1CEC9EBD0062D459 /* _GPXFile.swift */; };
-		0B8E15D31CEC9EBD0062D459 /* _Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15CD1CEC9EBD0062D459 /* _Waypoint.swift */; };
+		0B7A678F1D50C765007C65D9 /* Geocache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A67891D50C765007C65D9 /* Geocache+CoreDataProperties.swift */; };
+		0B7A67901D50C765007C65D9 /* Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A678A1D50C765007C65D9 /* Geocache.swift */; };
+		0B7A67911D50C765007C65D9 /* GPXFile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A678B1D50C765007C65D9 /* GPXFile+CoreDataProperties.swift */; };
+		0B7A67921D50C765007C65D9 /* GPXFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A678C1D50C765007C65D9 /* GPXFile.swift */; };
+		0B7A67931D50C765007C65D9 /* Waypoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A678D1D50C765007C65D9 /* Waypoint+CoreDataProperties.swift */; };
+		0B7A67941D50C765007C65D9 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A678E1D50C765007C65D9 /* Waypoint.swift */; };
+		0B7A679C1D50EFD2007C65D9 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A679B1D50EFD2007C65D9 /* GPX.swift */; };
 		0B8E15D81CECA0040062D459 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15D71CECA0040062D459 /* Store.swift */; };
 		0B8E15DB1CECA2730062D459 /* FilesImportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E15DA1CECA2730062D459 /* FilesImportOperation.swift */; };
 		0B8E16871CECB82A0062D459 /* ImportGPXOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E16861CECB82A0062D459 /* ImportGPXOperation.swift */; };
@@ -85,12 +86,13 @@
 		0B4BE7851D05457F0006E2BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		0B7A67781D50BC28007C65D9 /* Operations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operations.framework; path = Carthage/Build/Mac/Operations.framework; sourceTree = "<group>"; };
 		0B7A677A1D50BD2E007C65D9 /* Operations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operations.framework; path = Carthage/Build/Mac/Operations.framework; sourceTree = "<group>"; };
-		0B8E15C71CEC9EBD0062D459 /* Geocache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocache.swift; sourceTree = "<group>"; };
-		0B8E15C81CEC9EBD0062D459 /* GPXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXFile.swift; sourceTree = "<group>"; };
-		0B8E15C91CEC9EBD0062D459 /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
-		0B8E15CB1CEC9EBD0062D459 /* _Geocache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Geocache.swift; sourceTree = "<group>"; };
-		0B8E15CC1CEC9EBD0062D459 /* _GPXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _GPXFile.swift; sourceTree = "<group>"; };
-		0B8E15CD1CEC9EBD0062D459 /* _Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Waypoint.swift; sourceTree = "<group>"; };
+		0B7A67891D50C765007C65D9 /* Geocache+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Geocache+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B7A678A1D50C765007C65D9 /* Geocache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocache.swift; sourceTree = "<group>"; };
+		0B7A678B1D50C765007C65D9 /* GPXFile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXFile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B7A678C1D50C765007C65D9 /* GPXFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXFile.swift; sourceTree = "<group>"; };
+		0B7A678D1D50C765007C65D9 /* Waypoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B7A678E1D50C765007C65D9 /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		0B7A679B1D50EFD2007C65D9 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
 		0B8E15D41CEC9EEF0062D459 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		0B8E15D71CECA0040062D459 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0B8E15DA1CECA2730062D459 /* FilesImportOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesImportOperation.swift; sourceTree = "<group>"; };
@@ -181,43 +183,28 @@
 			name = Window;
 			sourceTree = "<group>";
 		};
+		0B7A67981D50EE6D007C65D9 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				0B8E15DA1CECA2730062D459 /* FilesImportOperation.swift */,
+				0B8E16861CECB82A0062D459 /* ImportGPXOperation.swift */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
 		0B8E15C41CEC9EAB0062D459 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0B7A67891D50C765007C65D9 /* Geocache+CoreDataProperties.swift */,
+				0B7A678A1D50C765007C65D9 /* Geocache.swift */,
+				0B7A678B1D50C765007C65D9 /* GPXFile+CoreDataProperties.swift */,
+				0B7A678C1D50C765007C65D9 /* GPXFile.swift */,
+				0B7A678D1D50C765007C65D9 /* Waypoint+CoreDataProperties.swift */,
+				0B7A678E1D50C765007C65D9 /* Waypoint.swift */,
 				0B415B5D1D05D21900959F04 /* UI */,
-				0B8E15C51CEC9EBD0062D459 /* CoreData */,
 				0BFCAF131CEC8EFC00A6F64D /* iCache.xcdatamodeld */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		0B8E15C51CEC9EBD0062D459 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				0B8E15C61CEC9EBD0062D459 /* Human */,
-				0B8E15CA1CEC9EBD0062D459 /* Machine */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		0B8E15C61CEC9EBD0062D459 /* Human */ = {
-			isa = PBXGroup;
-			children = (
-				0B8E15C71CEC9EBD0062D459 /* Geocache.swift */,
-				0B8E15C81CEC9EBD0062D459 /* GPXFile.swift */,
-				0B8E15C91CEC9EBD0062D459 /* Waypoint.swift */,
-			);
-			path = Human;
-			sourceTree = "<group>";
-		};
-		0B8E15CA1CEC9EBD0062D459 /* Machine */ = {
-			isa = PBXGroup;
-			children = (
-				0B8E15CB1CEC9EBD0062D459 /* _Geocache.swift */,
-				0B8E15CC1CEC9EBD0062D459 /* _GPXFile.swift */,
-				0B8E15CD1CEC9EBD0062D459 /* _Waypoint.swift */,
-			);
-			path = Machine;
 			sourceTree = "<group>";
 		};
 		0B8E15D61CEC9FF70062D459 /* Store */ = {
@@ -233,8 +220,8 @@
 		0B8E15D91CECA2590062D459 /* Importing */ = {
 			isa = PBXGroup;
 			children = (
+				0B7A67981D50EE6D007C65D9 /* Operations */,
 				0B8E16851CECB8150062D459 /* GPX */,
-				0B8E15DA1CECA2730062D459 /* FilesImportOperation.swift */,
 				0BED10051D05928600AE7756 /* Store+Import.swift */,
 			);
 			name = Importing;
@@ -243,7 +230,7 @@
 		0B8E16851CECB8150062D459 /* GPX */ = {
 			isa = PBXGroup;
 			children = (
-				0B8E16861CECB82A0062D459 /* ImportGPXOperation.swift */,
+				0B7A679B1D50EFD2007C65D9 /* GPX.swift */,
 			);
 			name = GPX;
 			sourceTree = "<group>";
@@ -447,21 +434,22 @@
 			files = (
 				0B415B5F1D05D22500959F04 /* GeocacheType.swift in Sources */,
 				0B415B611D05D2CE00959F04 /* GeocacheContainer.swift in Sources */,
+				0B7A67911D50C765007C65D9 /* GPXFile+CoreDataProperties.swift in Sources */,
 				0B8E15DB1CECA2730062D459 /* FilesImportOperation.swift in Sources */,
-				0B8E15CF1CEC9EBD0062D459 /* GPXFile.swift in Sources */,
-				0B8E15D11CEC9EBD0062D459 /* _Geocache.swift in Sources */,
-				0B8E15CE1CEC9EBD0062D459 /* Geocache.swift in Sources */,
-				0B8E15D01CEC9EBD0062D459 /* Waypoint.swift in Sources */,
+				0B7A678F1D50C765007C65D9 /* Geocache+CoreDataProperties.swift in Sources */,
+				0B7A67941D50C765007C65D9 /* Waypoint.swift in Sources */,
 				0BED10061D05928600AE7756 /* Store+Import.swift in Sources */,
+				0B7A67921D50C765007C65D9 /* GPXFile.swift in Sources */,
+				0B7A67901D50C765007C65D9 /* Geocache.swift in Sources */,
+				0B7A67931D50C765007C65D9 /* Waypoint+CoreDataProperties.swift in Sources */,
 				0B8E15D81CECA0040062D459 /* Store.swift in Sources */,
 				0B4BE7861D05457F0006E2BA /* MainWindowController.swift in Sources */,
 				0B415B581D05CE3900959F04 /* LatitudeFormatter.swift in Sources */,
 				0BFCAF101CEC8EFC00A6F64D /* AppDelegate.swift in Sources */,
-				0B8E15D31CEC9EBD0062D459 /* _Waypoint.swift in Sources */,
 				0BFCAF151CEC8EFC00A6F64D /* iCache.xcdatamodeld in Sources */,
 				0B8E16871CECB82A0062D459 /* ImportGPXOperation.swift in Sources */,
 				0BED10091D05A28300AE7756 /* GeocacheTableViewController.swift in Sources */,
-				0B8E15D21CEC9EBD0062D459 /* _GPXFile.swift in Sources */,
+				0B7A679C1D50EFD2007C65D9 /* GPX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

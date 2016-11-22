@@ -9,37 +9,18 @@
 import Foundation
 import Cocoa
 
-enum GeocacheType: Int {
-    case Traditionnal = 0
-    case Unknown
-    case Multi
-    case Event
-    case Earth
-    case Webcam
-    case Virtual
-    case APE
-    case WhereIGo
-    case TrashCache
-    case None
-
-
-    init(string: String) {
-
-        switch string {
-        case "Traditional Cache":
-            self = .Traditionnal
-        case "Multi-cache":
-            self = .Multi
-        case "Unknown Cache":
-            self = .Unknown
-        case "Earthcache":
-            self = .Earth
-        case "Event":
-            self = .Event
-        default:
-            self = .None
-        }
-    }
+enum GeocacheType: String {
+    case Traditionnal = "Traditional Cache"
+    case Unknown = "Unknown Cache"
+    case Multi = "Multi-cache"
+    case Event = "Event"
+    case Earth = "Earthcache"
+    case Webcam = "Webcam"
+    case Virtual = "Virtual"
+    case APE = "APE"
+    case WhereIGo = "WhereIGo"
+    case TrashCache = "Trash"
+    case None = "None"
 
     var image: NSImage {
         get {
